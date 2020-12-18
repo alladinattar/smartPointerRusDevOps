@@ -53,10 +53,8 @@ TEST(ShredPtr, operatorRavnoWithRValLink){
   ASSERT_EQ(var.use_count(),2);
 }
 
-TEST(SharedPtr, boolOperation){
-  SharedPtr<int> a;
-  ASSERT_EQ(bool(a), false);
-}
+
+
 
 TEST(SharedPtr, funcSwap){
   int a = 1;
@@ -66,3 +64,5 @@ TEST(SharedPtr, funcSwap){
   B.swap(A);
   ASSERT_EQ(*B, 1);
 }
+
+

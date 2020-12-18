@@ -46,8 +46,8 @@ class SharedPtr {
   };
 
   // проверяет, указывает ли указатель на объект
-  explicit operator bool() const {
-    if (pointerToObject == nullptr) {
+  operator bool() const  {
+    if (*this->pointerToObject == nullptr) {
       return false;
     } else {
       return true;
