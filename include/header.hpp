@@ -47,12 +47,16 @@ class SharedPtr {
 
   // проверяет, указывает ли указатель на объект
   operator bool() const  {
-    if (*this->pointerToObject == nullptr) {
+    return pointerToObject;
+  };
+
+  /*auto operator==(bool)const ->bool {
+    if (*this == nullptr) {
       return false;
     } else {
       return true;
     }
-  };
+  }*/
   auto operator*() const -> T& { return *pointerToObject; };
   auto operator->() const -> T* { return pointerToObject; };
 

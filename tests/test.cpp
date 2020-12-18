@@ -65,4 +65,12 @@ TEST(SharedPtr, funcSwap){
   ASSERT_EQ(*B, 1);
 }
 
+/*TEST(SharedPtr, funcReset){
+  int a = 88;
+  SharedPtr var(&a);
+  var.reset();
+  ASSERT_EQ(*var.get(), nullptr);
+}*/
+
+
 
