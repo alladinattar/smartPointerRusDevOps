@@ -16,7 +16,7 @@ class SharedPtr {
   SharedPtr(const SharedPtr& r)
       : pointerToObject(r.pointerToObject), counter(r.counter){++(*counter);};
   SharedPtr(SharedPtr&& r)
-      : pointerToObject(r.pointerToObject), counter(r.counter){++(*counter);};
+      : pointerToObject(std::move(r.pointerToObject)), counter(std::move(r.countOfLinks)){++(*counter);};
   ~SharedPtr() {
     if (*counter == 1) {
       delete counter;
