@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "header.hpp"
+#include "SharedPtr.hpp"
 TEST(Example, EmptyTest) { EXPECT_TRUE(true); }
 
 /*TEST(SharedPtr, constructor1) {
